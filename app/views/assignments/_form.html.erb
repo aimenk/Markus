@@ -66,7 +66,7 @@
               <br />
               <%= due_date_f.text_field :section_id, :class => 'hidden'%>
               <br />
-              <%= due_date_f.label :due_date, t("due_date") %>
+              <%= due_date_f.label :due_date, t("required_due_date") %>
               <%= due_date_f.calendar_date_select :due_date, { :time => "mixed",
                                           :after_close => "refresh_due_date();",
                                           :year_range => 0.years.ago..1.years.from_now } %>
@@ -75,7 +75,7 @@
         </div>
       </div>
     <% end %>
-    <%= raw( f.label :due_date, t(:due_date) ) %>
+    <%= raw( f.label :due_date, t(:required_due_date) ) %>
 
     <%# TODO update the global due date with the first due date added. %>
 
