@@ -1,0 +1,11 @@
+app/views/assignments/_boot.js.erb:    toggle_group_assignment(<%= @assignment.group_assignment? %>);
+app/views/assignments/_boot.js.erb:    toggle_remark_requests(<%= @assignment.allow_remarks? %>);
+app/views/assignments/_form.html.erb:        :function => "toggle_sections_due_date(
+app/views/assignments/_form.html.erb:    <%= check_box_tag "persist_groups", true, false, :id => "persist_groups", :onclick => "toggle_persist_groups($(this).getValue());", :disabled => true%>
+app/views/assignments/_form.html.erb:                           :onchange => "toggle_group_assignment($F('is_group_assignment'))" ) %>
+app/views/assignments/_form.html.erb:                         "toggle_student_form_groups($F('student_form_groups'))" ) %>
+app/views/assignments/_form.html.erb:                    :onchange => "toggle_remark_requests($F('allow_remarks'))"},
+app/views/automated_tests/_boot.js.erb:      toggle_automated_tests(<%= @assignment.enable_test %>);
+app/views/automated_tests/_form.html.erb:    <%= f.check_box :enable_test, :id => "is_testing_framework_enabled", :onchange => "toggle_automated_tests($F('is_testing_framework_enabled'))" %>
+app/views/students/index.html.erb:      <div id="toggle_actions">
+app/views/submissions/file_manager.html.erb:    <%= link_to_function I18n.t("student.submission.toggle_file_list"), "$('missing_assignment_files_list').toggle();"%>

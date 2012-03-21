@@ -259,9 +259,9 @@ class SubmissionsController < ApplicationController
 
   def update_column_filter
 
-   @submission_col_header = { :col1 => params[:col1] == "yes", :col2 => params[:col2] == "yes", :col3 => params[:col3] == "yes", :col4 => params[:col4] == "yes", :col5 => params[:col5] == "yes", :col6 => params[:col6] == "yes", :col7 => params[:col7] == "yes", :col8 => params[:col8] == "yes", :col9 => params[:col9] == "yes"}
+   @submission_col_header = { :col1 => params[:sCol1] == "yes", :col2 => params[:sCol2] == "yes", :col3 => params[:sCol3] == "yes", :col4 => params[:sCol4] == "yes", :col5 => params[:sCol5] == "yes", :col6 => params[:sCol6] == "yes", :col7 => params[:sCol7] == "yes", :col8 => params[:sCol8] == "yes", :col9 => params[:sCol9] == "yes"}
 
-  render :template => "update_column_filter", locals => { @submission_col_header => @submission_col_header }
+  render :action => "update_column_filter", :locals => { @submission_col_header => @submission_col_header }
 
 end
 

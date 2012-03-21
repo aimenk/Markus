@@ -1,6 +1,56 @@
  
 
-if(@submition_col_header[:col1] == false)
-               page['sCol1']['style']['display'] = none
+if(@submission_col_header[:col1] == true)
+               page['sCol1']['style']['display'] = 'inline'
+
        else
-               page['sCol1']['style']['display'] = inline
+               page['sCol1']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col2] == true)
+               page['sCol2']['style']['display'] = 'inline'
+       else
+               page['sCol2']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col3] == true)
+               page['sCol3']['style']['display'] = 'inline'
+       else
+               page['sCol3']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col4] == true)
+               page['sCol4']['style']['display'] = 'inline'
+       else
+               page['sCol4']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col5] == true)
+               page['sCol5']['style']['display'] = 'inline'
+       else
+               page['sCol5']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col6] == true)
+               page['sCol6']['style']['display'] ='inline'
+       else
+               page['sCol6']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col7] == true)
+               page['sCol7']['style']['display'] = 'inline'
+       else
+               page['sCol7']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col8] == true)
+               page['sCol8']['style']['display'] = 'inline'
+       else
+               page['sCol8']['style']['display'] = 'none'
+end
+
+if(@submission_col_header[:col9] == true)
+               page['sCol9']['style']['display'] = 'inline'
+       else
+               page['sCol9']['style']['display'] = 'none'
+end
