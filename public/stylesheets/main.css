@@ -1802,6 +1802,11 @@ span.due_date{
   margin-bottom: 5px;
 }
 
+span.short_identifier{
+   margin-left: -0.5em;
+
+}
+
 fieldset.period{
   margin: 10px 0px;
 }

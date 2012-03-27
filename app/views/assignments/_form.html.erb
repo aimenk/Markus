@@ -29,18 +29,19 @@
   <legend><%= t("assignment.properties") %></legend>
     <%= raw( f.label :short_identifier, t(:short_identifier) ) %>
     <% if @assignment.id.nil? %>
-      <pre>*<%=raw( f.text_field :short_identifier,
+      <span class="short_identifier">*<%=raw( f.text_field :short_identifier,
                        :onchange =>  "$(
                             'assignment_repository_folder').setValue(
-                                    $(this).getValue())" )%><br /></pre>
+                                    $(this).getValue())" )%><br /></span>
     <% else %>
-      <pre>*<%= raw( f.text_field :short_identifier ) %><br /></pre>
+      <span class="short_identifier">
+        *<%= raw( f.text_field :short_identifier ) %><br />></span>
     <% end %>
 
     <%= raw( f.label :description, t(:name) ) %>
-    <pre> <%= raw( f.text_field :description ) %><br /></pre>
+    <%= raw( f.text_field :description ) %><br />
     <%= raw( f.label :message ) %>
-    <pre> <%= raw( f.text_area :message, :rows => 8, :cols => 65 ) %><br /></pre>
+    <%= raw( f.text_area :message, :rows => 8, :cols => 65 ) %><br />
 
     <% if !@sections.empty? %>
       <div id="section_due_dates_type_form_right" class="information">
