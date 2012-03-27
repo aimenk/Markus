@@ -19,7 +19,9 @@
 <% end %>
 
 <p>
-   <%= I18n.t(:required_field) %>
+   <span class="required_fileds">
+     <%= I18n.t(:required_field) %>
+   </span>
 </p>
 
 <%= form_for @assignment do |f| %>
@@ -29,13 +31,14 @@
   <legend><%= t("assignment.properties") %></legend>
     <%= raw( f.label :short_identifier, t(:short_identifier) ) %>
     <% if @assignment.id.nil? %>
-      <span class="short_identifier">*<%=raw( f.text_field :short_identifier,
+      <span class="asterik">*</span>
+                  <%=raw( f.text_field :short_identifier,
                        :onchange =>  "$(
                             'assignment_repository_folder').setValue(
-                                    $(this).getValue())" )%><br /></span>
+                                    $(this).getValue())" )%><br />
     <% else %>
-      <span class="short_identifier">
-        *<%= raw( f.text_field :short_identifier ) %><br />></span>
+      <span class="asterik">*</span>
+       <%= raw( f.text_field :short_identifier ) %><br />>
     <% end %>
 
     <%= raw( f.label :description, t(:name) ) %>
@@ -72,7 +75,8 @@
               <%= due_date_f.text_field :section_id, :class => 'hidden'%>
               <br />
               <%= due_date_f.label :due_date, t("due_date") %>
-              *<%= due_date_f.calendar_date_select :due_date, { :time => "mixed",
+              <span class="asterik"> * </span>
+              <%= due_date_f.calendar_date_select :due_date, { :time => "mixed",
                                           :after_close => "refresh_due_date();",
                                           :year_range => 0.years.ago..1.years.from_now } %>
             </p>
@@ -83,8 +87,9 @@
     <%= raw( f.label :due_date, t(:due_date) ) %>
 
     <%# TODO update the global due date with the first due date added. %>
-
-    *<%=raw( f.calendar_date_select :due_date, {
+     
+     <span class="asterik"> * </span>
+      <%=raw( f.calendar_date_select :due_date, {
           :time => "mixed",
           :locale => I18n.default_locale,
           :after_close => "refresh_due_date();",

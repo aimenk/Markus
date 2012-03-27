@@ -1812,10 +1812,15 @@ span.due_date{
   margin-bottom: 5px;
 }
 
-span.short_identifier{
-   margin-left: -0.5em;
-
+span.asterik{
+   color: red;
+   margin-left: -0.9em;
+   font-size: 1.2em;
 }
+
+span.required_fileds{
+ color: red;
+};
 
 fieldset.period{
   margin: 10px 0px;
